@@ -5,7 +5,7 @@ import Table from "./components/Table";
 function App() {
   let data = [];
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 17; i++) {
     data.push([
       "02/02/2023 - 6:37 PM",
       17.6,

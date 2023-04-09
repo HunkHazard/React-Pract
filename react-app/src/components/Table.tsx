@@ -13,28 +13,48 @@ const Table = ({ data }: TableProps) => {
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
         color: "white",
+        borderRadius: "10px",
       }}
     >
       <table>
-        <thead style={{ background: "white", color: "#36016f" }}>
+        <thead
+          style={{ background: "white", color: "#36016f", textAlign: "center" }}
+        >
           <th colSpan={9}>Inside Temp/Hum</th>
           <th colSpan={3}>Barometer</th>
         </thead>
 
-        <tbody>
+        <tbody style={{ textAlign: "center" }}>
           <tr style={{ background: "white", color: "#36016f" }}>
             <th>
               Date & Time <br />
               <span style={{ fontSize: "13px" }}>Hide Units</span>{" "}
             </th>
-            <th>Inside Temp &deg;C</th>
-            <th>Inside High Temp &deg;C</th>
-            <th>Inside Low Temp &deg;C</th>
-            <th>Inside Hum &#37; </th>
-            <th>Inside High Hum &#37; </th>
-            <th>Inside Low Hum &#37;</th>
-            <th>Inside Dew Index &deg;C</th>
-            <th>Inside Heat Index &deg;C</th>
+            <th>
+              Inside Temp <br /> &deg;C
+            </th>
+            <th>
+              Inside High Temp <br /> &deg;C
+            </th>
+            <th>
+              Inside Low Temp
+              <br /> &deg;C
+            </th>
+            <th>
+              Inside Hum <br /> &#37;{" "}
+            </th>
+            <th>
+              Inside High Hum <br /> &#37;{" "}
+            </th>
+            <th>
+              Inside Low Hum <br /> &#37;
+            </th>
+            <th>
+              Inside Dew Index <br /> &deg;C
+            </th>
+            <th>
+              Inside Heat Index <br /> &deg;C
+            </th>
             <th>
               High Bar
               <span style={{ fontSize: "13px" }}>
@@ -59,11 +79,18 @@ const Table = ({ data }: TableProps) => {
           </tr>
           {data.map((row, index1) => {
             return (
-              <tr key={index1}>
+              <tr key={index1} style={{}}>
                 {row.map((item, index) => {
                   if (index === 0) {
                     return (
-                      <td style={{ background: "white", color: "#36016f" }}>
+                      <td
+                        style={{
+                          background: "white",
+                          color: "#36016f",
+                          width: "175px",
+                          height: "50px",
+                        }}
+                      >
                         {item}
                       </td>
                     );
